@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="html page">
+    <meta name = "keyword" content = "html example">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template tag</title>
+</head>
+<body>
+    <h1>Template Element Example</h1>  
+  
+<p>To view the template element's concealed content, click the button below.</p>  
+  
+<button onclick="showContent()">show content</button>  
+  
+<template>  
+  <h2>Flower</h2>  
+  <img src="C:\Users\manik\Downloads\test1.jpg" width="60" height="40">  
+</template>  
+  
+<script>  
+function showContent() {  
+  let temp = document.getElementsByTagName("template")[0];  
+  let clon = temp.content.cloneNode(true);  
+  document.body.appendChild(clon);  
+}  
+</script> 
+</body>
+</html>
