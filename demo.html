@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeBold(){
+            let para = document.getElementsByTagName("p");
+            for(let i = 0;i<para.length;i++){
+                para[i].style.fontWeight = "bold";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>first paragraph</p>
+    <p>second paragraph</p>
+    <button onclick="makeBold()">make bold</button>
+</body>
+</html>

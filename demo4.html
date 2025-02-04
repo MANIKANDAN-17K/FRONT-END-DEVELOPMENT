@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function underlineText(){
+            let element = document.querySelectorAll(".myclass");
+            element.forEach(el =>el.style.textDecoration = "underline");
+        }
+    </script>
+</head>
+<body>
+    <p class="myclass">this is paragraph 1</p>
+    <p class="myclass">this is paragraph 2</p>
+    <p class="myclass">this is paragraph 3</p>
+    <button onclick="underlineText()">underline all</button>
+
+</body>
+</html>
