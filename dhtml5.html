@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Image on Mouse Move</title>
+    <style>
+        #animatedImage {
+            position: absolute;
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <img id="animatedImage" src="C:\Users\Manik\Pictures\Screenshots\logo.png" alt="Example Image">
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            var image = document.getElementById('animatedImage');
+            var x = e.clientX;
+            var y = e.clientY;
+            image.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        });
+    </script>
+</body>
+</html>

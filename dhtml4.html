@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation</title>
+    <script>
+        function validateAge() {
+    var age = document.getElementById('age').value;
+    var message = document.getElementById('message');
+
+    if (isNaN(age) || age.trim() === "") {
+        message.textContent = "Please enter a valid age.";
+        return false;
+    }
+
+    age = parseInt(age);
+    if (age >= 18) {
+        message.textContent = "You are eligible to vote.";
+        // You can load a different part of the page here if needed
+        // window.location.href = 'eligiblePage.html'; // Uncomment and replace with the actual page URL if needed
+    } else {
+        message.textContent = "You are not eligible to vote.";
+    }
+    
+    return false; // Prevent form submission
+}
+
+    </script>
+</head>
+<body>
+    <h1>Age Validation for Voting Eligibility</h1>
+    <form onsubmit="return validateAge()">
+        <label for="age">Enter your age:</label>
+        <input type="text" id="age" name="age" required>
+        <input type="submit" value="Check Eligibility">
+    </form>
+    <div id="message"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhtml</title>
+    <script src="dhtml1.js"></script>
+    <style>
+       #table1{
+            width: 250px;
+       }
+       #row1{
+        background-color: rgb(1, 157, 218) ;
+       }
+       #row2{
+        background-color: gold;
+       }
+       #row3{
+        background-color: rgb(63, 175, 63);
+       }
+       #row4{
+        background-color: coral;
+       }
+    </style>
+</head>
+<body>
+    <table id="table1" border="2px" style="border-color: red;">
+        <tr id="row1">
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+        <tr id="row2">
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr id="row3">
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr id="row4">
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+        <tr id="row4">
+            <td>X</td>
+            <td>Y</td>
+            <td>Z</td>
+        </tr>
+    </table>
+    <form action="#">
+        <table>
+            <tr>
+                <td><input type="button" value="change width" id="wth" name="wth" onclick="changeWidth()"></td>
+                <td><input type="button" value="caption" name="capt" id="capt"onclick = "addcaption()"></td>
+                <td><input type="button" value="add row" name="addrow" id="addrow" onclick="addrow()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="add cell" name="addcell" id="addcell" onclick="addCell()"></td>
+                <td><input type="button" value="change content" name="change" id="change" onclick="changeContent()"></td>
+                <td><input type="button" value="change colspan" name="span" id="span" onclick="changeColspan()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

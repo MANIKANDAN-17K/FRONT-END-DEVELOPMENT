@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <script>
+        function showWelcomeMessage() {
+    var welcomeText = document.getElementById('welcomeText');
+    welcomeText.textContent = 'Welcome to Anna University';
+    welcomeText.onclick = function() {
+        increaseFontSize();
+    };
+}
+
+function increaseFontSize() {
+    var welcomeText = document.getElementById('welcomeText');
+    var currentFontSize = parseInt(window.getComputedStyle(welcomeText).fontSize);
+    welcomeText.style.fontSize = (currentFontSize + 5) + 'px';
+}
+
+function showThankYouMessage() {
+    var welcomeText = document.getElementById('welcomeText');
+    welcomeText.textContent = 'Thank you';
+}
+
+    </script>
+    <style>
+        #welcomeText {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="showWelcomeMessage()" onunload="showThankYouMessage()">
+    <div id="welcomeText">Welcome to Anna University</div>
+</body>
+</html>

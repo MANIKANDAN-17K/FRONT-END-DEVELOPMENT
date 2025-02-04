@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Detection</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type here...">
+    <div id="message"></div>
+    <script>
+        document.addEventListener('keydown', function(e) {
+            var message = document.getElementById('message');
+            if (e.getModifierState('CapsLock')) {
+                message.textContent = 'Caps Lock is on';
+            }
+            if (e.altKey) {
+                message.textContent = 'Alt key is pressed';
+            }
+        });
+    </script>
+</body>
+</html>

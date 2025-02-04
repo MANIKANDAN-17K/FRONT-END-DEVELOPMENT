@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Node Details</title>
+</head>
+<body>
+    <div id="div1" class="divclass" >html details</div>
+    <button onclick="showNodeDetails()">Show Node Details</button>
+    <div id="details"></div>
+    <script>
+        function showNodeDetails() {
+            var details = document.getElementById('details');
+            var sampleDiv = document.getElementById('div1');
+            
+            // Display node details
+            var nodeName = 'Node Name: ' + sampleDiv.nodeName;
+            var nodeType = 'Node Type: ' + sampleDiv.nodeType;
+
+            // Display attributes and their values
+            var attributes = sampleDiv.attributes;
+            var attributesDetails = 'Attributes: ';
+            for (var i = 0; i < attributes.length; i++) {
+                attributesDetails += attributes[i].name + '="' + attributes[i].value + '" ';
+            }
+            
+            // Display innerHTML
+            var innerHTML = 'Inner HTML: ' + sampleDiv.innerHTML;
+
+            details.innerHTML = nodeName + '<br>' + nodeType + '<br>' + attributesDetails + '<br>' + innerHTML;
+        }
+    </script>
+</body>
+</html>
